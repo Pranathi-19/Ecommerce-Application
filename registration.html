@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #c9c8d9; /* Light Purple */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #e6e6e6;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 700px;
+            width: 100%;
+            border: 5px solid #C71585;
+        }
+        
+        h2 {
+           color: #00796b;
+           font-weight: bold;
+        }
+
+        .btn-custom {
+            background-color: #4db6ac;
+            color: white;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #009688;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <h2 class="text-center mb-4">Registration Form</h2>
+
+    <!-- ✅ Added onsubmit -->
+    <form onsubmit="redirectToLogin(event)">
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Gender</label><br>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" value="Male" required>
+                <label class="form-check-label">Male</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" value="Female">
+                <label class="form-check-label">Female</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" value="Other">
+                <label class="form-check-label">Other</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Address</label>
+            <textarea class="form-control" rows="1" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-custom w-100">Register</button>
+
+    </form>
+</div>
+
+<!-- ✅ JavaScript Redirect -->
+<script>
+function redirectToLogin(event) {
+    event.preventDefault(); // Stop default form refresh
+    
+    alert("Registration Successful!");
+    
+    // Redirect inside iframe
+    window.parent.frames["content"].location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

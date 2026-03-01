@@ -1,0 +1,84 @@
+/* BODY */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #c9c8d9;   /* Light purple */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    background-color: #D8BFD8;  
+    padding: 15px;
+    position: relative;
+    text-align: center;
+
+    border-bottom: 8px solid #DA70D6;   /* Orchid Border */
+}
+
+
+.logo {
+    width: 55px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* SIDEBAR */
+.taskbar {
+    background-color: #4682B4;   /* Steel Blue */
+    min-height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+
+    border-right: 6px solid #DA70D6;   /* Orchid Border */
+}
+
+.taskbar a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.taskbar a:hover {
+    background-color: #36648B;   /* Darker steel blue on hover */
+}
+
+
+/* IFRAME */
+.iframe-container {
+    width: 100%;
+    height: calc(100vh - 140px);
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    background-color: #212121;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #4db6ac;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

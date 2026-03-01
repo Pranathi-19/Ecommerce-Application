@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #c9c8d9; /* Light Purple */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #e6e6e6;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            border: 5px solid #C71585;
+        }
+
+        .btn-custom {
+            background-color: #4db6ac;
+            color: white;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #009688;
+        }
+
+        .link-text {
+            font-size: 14px;
+        }
+
+        .link-text a {
+            color: #009688;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <h2 class="text-center mb-4">Login</h2>
+
+    <!-- ✅ Added onsubmit -->
+    <form onsubmit="redirectToCatalog(event)">
+
+        <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-custom w-100 mb-3">Login</button>
+
+    </form>
+
+    <div class="text-center link-text">
+        <p>
+            Don’t have an account?
+            <a href="registration.html" target="content">Register here</a>
+        </p>
+    </div>
+
+</div>
+
+<!-- ✅ JavaScript Redirect -->
+<script>
+function redirectToCatalog(event) {
+    event.preventDefault(); // Stop form refresh
+    
+    alert("Login Successful!");
+    
+    // Redirect inside iframe
+    window.parent.frames["content"].location.href = "catalog.html";
+}
+</script>
+
+</body>
+</html>
